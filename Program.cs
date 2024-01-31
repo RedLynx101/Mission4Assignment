@@ -1,6 +1,8 @@
 ﻿using Mission4Assignment;
 
+TicTacTools ttt = new TicTacTools();
 
+Console.WriteLine("Welcome to our tic tac toe game!");
 
 
 internal class Program
