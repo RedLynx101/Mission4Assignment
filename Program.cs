@@ -102,5 +102,5 @@ do
 } while (!gameOver);
 
 Console.WriteLine("Thanks for playing!");
-//Thread.Sleep(300);
 
+Console.ReadLine();
