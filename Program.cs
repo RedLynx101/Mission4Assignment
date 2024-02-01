@@ -64,8 +64,17 @@ do
         Console.WriteLine($"{playerName}, please enter the position number you would like: ");
         string input = Console.ReadLine();
 
-        if (int.TryParse(input, out position))
+        if (int.TryParse(input, out position) && position >= 1 && position <= 9)
         {
+            if (game[position-1] == " ")
+            {
+                isContinuing = false;
+                game[position - 1] = token;
+            }
+            else
+            {
+                Console.WriteLine("That position is already taken. Please choose a different position.");
+            }
             isContinuing = false;
         }
         else
@@ -74,7 +83,6 @@ do
         }
     }
     isContinuing = true;
-    game[position - 1] = token; // -1 because the array is 0 indexed
     Console.WriteLine(ttt.UpdatePrintBoard(game));
 
     if (ttt.CheckWinHorizontal(game) == true)
