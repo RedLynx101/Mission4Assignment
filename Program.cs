@@ -1,5 +1,9 @@
 ﻿// Authors: Nya Croft, Noah Hicks, Noah Haskett, Jensen Hermansen
 // Section 004
+// Description: This program is a tic tac toe game that allows two players to play against each other.
+// The game will prompt the players to enter their names and then will display the game board.
+// The players will take turns entering the position number they would like to place their token.
+// The game will continue until a player wins or the game ends in a tie.
 
 
 using System.Runtime.InteropServices;
