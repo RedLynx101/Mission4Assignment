@@ -75,7 +75,6 @@ do
             {
                 Console.WriteLine("That position is already taken. Please choose a different position.");
             }
-            isContinuing = false;
         }
         else
         {
