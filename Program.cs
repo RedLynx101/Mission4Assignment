@@ -20,11 +20,23 @@ for (int i = 0; i < game.Length; i++)
 Console.WriteLine("Welcome to our tic tac toe game!");
 Console.WriteLine("Loading the playing field");
 Thread.Sleep(300);
-Console.Write(".");
+Console.WriteLine(".");
 Thread.Sleep(300);
-Console.Write(".");
+Console.WriteLine(".");
 Thread.Sleep(300);
-Console.Write(".");
+Console.WriteLine(".");
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("This is the tic tac toe position layout for reference");
+Console.WriteLine();
+string completeBoard = $" 1 | 2 | 3\n" +
+               $" ---------\n" +
+               $" 4 | 5 | 6\n" +
+               $" ---------\n" +
+               $" 7 | 8 | 9\n";
+
+Console.WriteLine(completeBoard);
+Console.WriteLine();
 
 
 Console.WriteLine("Please enter player 1's name: ");
