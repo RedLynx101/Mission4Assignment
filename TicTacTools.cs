@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace Mission4Assignment
 {
-
+    // This class contains the logic for the tic tac toe game
     internal class TicTacTools
     {
+        // The positions of the board, references
         string position1 = "1";
         string position2 = "2";
         string position3 = "3";
@@ -19,6 +20,7 @@ namespace Mission4Assignment
         string position8 = "8";
         string position9 = "9";
 
+        // This method updates the board with the current game state
         public string UpdatePrintBoard(string[] game)
         {
             if (game.Length >= 9)
@@ -38,20 +40,25 @@ namespace Mission4Assignment
                 Console.WriteLine("Array Update Error");
             }
 
+            // The board is updated with the current game state
             string board = $" {position1} | {position2} | {position3}\n" +
                            $" ---------\n" +
                            $" {position4} | {position5} | {position6}\n" +
                            $" ---------\n" +
                            $" {position7} | {position8} | {position9}\n";
            
+            // The updated board is returned
             return board;
 
         }
 
+        // This method checks the current game state to see if a player has won in a horizontal line
         public bool CheckWinHorizontal(string[] positionArray, string name)
         {
+            // The result is set to false by default
             bool result = false;
 
+            // The logic to check if a player has won in a horizontal line, checks the current game state
             if (positionArray[0] == "X" && positionArray[1] == "X" && positionArray[2] == "X")
             {
                 Console.WriteLine($"{name} Wins!");
@@ -94,10 +101,13 @@ namespace Mission4Assignment
             return result;
         }
 
+        // This method checks the current game state to see if a player has won in a vertical line
         public bool CheckWinVertical(string[] positionArray, string name)
         {
+            // The result is set to false by default
             bool result = false;
 
+            // The logic to check if a player has won in a vertical line, checks the current game state
             if (positionArray[0] == "X" && positionArray[3] == "X" && positionArray[6] == "X")
             {
                 Console.WriteLine($"{name} Wins!");
@@ -141,10 +151,13 @@ namespace Mission4Assignment
             return result;
         }
 
+        // This method checks the current game state to see if a player has won in a diagonal line
         public bool CheckWinDiagonal(string[] positionArray, string name)
         {
+            // The result is set to false by default
             bool result = false;
 
+            // The logic to check if a player has won in a diagonal line, checks the current game state
             if (positionArray[0] == "X" && positionArray[4] == "X" && positionArray[8] == "X")
             {
                 Console.WriteLine($"{name} Wins!");
