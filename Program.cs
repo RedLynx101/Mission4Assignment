@@ -85,15 +85,15 @@ do
     isContinuing = true;
     Console.WriteLine(ttt.UpdatePrintBoard(game));
 
-    if (ttt.CheckWinHorizontal(game) == true)
+    if (ttt.CheckWinHorizontal(game, playerName) == true)
     {
         gameOver = true;
     }
-    if (ttt.CheckWinVertical(game) == true)
+    if (ttt.CheckWinVertical(game, playerName) == true)
     {
         gameOver = true;
     }
-    if (ttt.CheckWinDiagonal(game) == true)
+    if (ttt.CheckWinDiagonal(game, playerName) == true)
     {
         gameOver = true;
     }
