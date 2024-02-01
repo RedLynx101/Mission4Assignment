@@ -99,3 +99,5 @@ do
         playerTurn = 0;
     }
 } while (!gameOver);
+
+Console.WriteLine("Thanks for playing!");
