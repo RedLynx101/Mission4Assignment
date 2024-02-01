@@ -3,11 +3,11 @@ using Mission4Assignment;
 
 TicTacTools ttt = new TicTacTools();
 
-string player1 = "";
-string player2 = "";
-int playerTurn = 0;
-string playerName = "";
-string token = "";
+string player1 = ""; // Player 1's name
+string player2 = ""; // Player 2's name
+int playerTurn = 0; // 0 = player 1, 1 = player 2
+string playerName = ""; // Temporarily holds the current player's name
+string token = ""; // Temporarily holds the current player's token
 bool isContinuing = true;
 string[] game = new string[9];
 int position = 0;
@@ -39,6 +39,7 @@ for (int i = 0; i < game.Length; i++)
         playerName = player2;
         token = "O";
     }
+    
 
     while (isContinuing)
     {
@@ -55,7 +56,7 @@ for (int i = 0; i < game.Length; i++)
         }
     }
     isContinuing = true;
-    game[position - 1] = token;
+    game[position - 1] = token; // -1 because the array is 0 indexed
     Console.WriteLine(ttt.UpdatePrintBoard(game));
     
     if (playerTurn == 0)
