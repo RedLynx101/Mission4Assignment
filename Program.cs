@@ -12,6 +12,11 @@ bool isContinuing = true;
 string[] game = new string[9];
 int position = 0;
 
+for (int i = 0; i < game.Length; i++)
+{
+    game[i] = " ";
+}
+
 Console.WriteLine("Welcome to our tic tac toe game!");
 Console.WriteLine("Loading the playing field");
 Thread.Sleep(300);
