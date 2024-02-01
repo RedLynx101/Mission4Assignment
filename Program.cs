@@ -1,4 +1,5 @@
-﻿using Mission4Assignment;
+﻿using System.Runtime.InteropServices;
+using Mission4Assignment;
 
 TicTacTools ttt = new TicTacTools();
 
@@ -12,6 +13,13 @@ string[] game = new string[9];
 int position = 0;
 
 Console.WriteLine("Welcome to our tic tac toe game!");
+Console.WriteLine("Loading the playing field");
+Thread.Sleep(300);
+Console.Write(".");
+Thread.Sleep(300);
+Console.Write(".");
+Thread.Sleep(300);
+Console.Write(".");
 
 
 Console.WriteLine("Please enter player 1's name: ");
