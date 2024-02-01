@@ -90,6 +90,12 @@ do
         gameOver = true;
     }
 
+    // Logic to see if the array is full and no one has won.
+    if (ttt.CheckTie(game) == true)
+    {
+        gameOver = true;
+    }
+
 
     if (playerTurn == 0)
     {
@@ -102,5 +108,5 @@ do
 } while (!gameOver);
 
 Console.WriteLine("Thanks for playing!");
-//Thread.Sleep(300);
 
+Console.ReadLine();

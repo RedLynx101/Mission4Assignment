@@ -177,6 +177,20 @@ namespace Mission4Assignment
             return result;
         }
 
+        // Logic to see if the array is full and no one has won
+        public bool CheckTie(string[] positionArray)
+        {
+            if (!positionArray.Contains(" "))
+            {
+                Console.WriteLine("It's a tie!");
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }   
+
     }
 
 }
