@@ -1,4 +1,8 @@
-﻿using System.Runtime.InteropServices;
+﻿// Authors: Nya Croft, Noah Hicks, Noah Haskett, Jensen Hermansen
+// Section 004
+
+
+using System.Runtime.InteropServices;
 using Mission4Assignment;
 
 TicTacTools ttt = new TicTacTools();
@@ -75,11 +79,10 @@ do
             {
                 Console.WriteLine("That position is already taken. Please choose a different position.");
             }
-            isContinuing = false;
         }
         else
         {
-            Console.WriteLine("Invalid input. Please enter a valid number.");
+            Console.WriteLine("Invalid input. Please enter a valid number between 1 and 9.");
         }
     }
     isContinuing = true;
