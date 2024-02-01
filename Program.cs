@@ -11,6 +11,7 @@ string token = "";
 bool isContinuing = true;
 string[] game = new string[9];
 int position = 0;
+bool gameOver = false;
 
 for (int i = 0; i < game.Length; i++)
 {
@@ -30,9 +31,9 @@ Console.Write(".");
 Console.WriteLine("Please enter player 1's name: ");
 player1 = Console.ReadLine();
 Console.WriteLine("Please enter player 2's name: ");
-player2 = Console.ReadLine();  
+player2 = Console.ReadLine();
 
-for (int i = 0; i < game.Length; i++)
+do
 {
     if (playerTurn == 0)
     {
@@ -62,7 +63,21 @@ for (int i = 0; i < game.Length; i++)
     isContinuing = true;
     game[position - 1] = token;
     Console.WriteLine(ttt.UpdatePrintBoard(game));
-    
+
+    if (ttt.CheckWinHorizontal(game) == true)
+    {
+        gameOver = true;
+    }
+    if (ttt.CheckWinVertical(game) == true)
+    {
+        gameOver = true;
+    }
+    if (ttt.CheckWinDiagonal(game) == true)
+    {
+        gameOver = true;
+    }
+
+
     if (playerTurn == 0)
     {
         playerTurn = 1;
@@ -71,4 +86,4 @@ for (int i = 0; i < game.Length; i++)
     {
         playerTurn = 0;
     }
-}
+} while (!gameOver);
