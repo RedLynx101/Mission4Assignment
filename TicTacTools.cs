@@ -48,41 +48,42 @@ namespace Mission4Assignment
 
         }
 
-        public bool CheckWinHorizontal(string[] positionArray)
+        public bool CheckWinHorizontal(string[] positionArray, string name)
         {
             bool result = false;
 
             if (positionArray[0] == "X" && positionArray[1] == "X" && positionArray[2] == "X")
             {
-                Console.WriteLine("Player 1 Wins Horizontally!");
+                Console.WriteLine($"{name} Wins!");
                 result = true;
             }
             else if (positionArray[3] == "X" && positionArray[4] == "X" && positionArray[5] == "X")
             {
-                Console.WriteLine("Player 1 Wins Horizontally!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[6] == "X" && positionArray[7] == "X" && positionArray[8] == "X")
             {
-                Console.WriteLine("Player 1 Wins Horizontally!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[0] == "O" && positionArray[1] == "O" && positionArray[2] == "O")
             {
-                Console.WriteLine("Player 2 Wins Horizontally!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[3] == "O" && positionArray[4] == "O" && positionArray[5] == "O")
             {
-                Console.WriteLine("Player 2 Wins Horizontally!");
+                Console.WriteLine($"{name} Wins!");
+
                 result = true;
             }
             else if (positionArray[6] == "O" && positionArray[7] == "O" && positionArray[8] == "O")
             {
-                Console.WriteLine("Player 2 Wins Horizontally!");
+                Console.WriteLine($"{name} Wins!");
                 result = true;
             }
             else
@@ -93,41 +94,43 @@ namespace Mission4Assignment
             return result;
         }
 
-        public bool CheckWinVertical(string[] positionArray)
+        public bool CheckWinVertical(string[] positionArray, string name)
         {
             bool result = false;
 
             if (positionArray[0] == "X" && positionArray[3] == "X" && positionArray[6] == "X")
             {
-                Console.WriteLine("Player 1 Wins Vertically!");
+                Console.WriteLine($"{name} Wins!");
                 result = true;
             }
             else if (positionArray[1] == "X" && positionArray[4] == "X" && positionArray[7] == "X")
             {
-                Console.WriteLine("Player 1 Wins Vertically!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[2] == "X" && positionArray[5] == "X" && positionArray[8] == "X")
             {
-                Console.WriteLine("Player 1 Wins Vertically!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[0] == "O" && positionArray[3] == "O" && positionArray[6] == "O")
             {
-                Console.WriteLine("Player 2 Wins Vertically!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[1] == "O" && positionArray[4] == "O" && positionArray[7] == "O")
             {
-                Console.WriteLine("Player 2 Wins Vertically!");
+                Console.WriteLine($"{name} Wins!");
+
                 result = true;
             }
             else if (positionArray[2] == "O" && positionArray[5] == "O" && positionArray[8] == "O")
             {
-                Console.WriteLine("Player 2 Wins Vertically!");
+                Console.WriteLine($"{name} Wins!");
+
                 result = true;
             }
             else
@@ -138,30 +141,32 @@ namespace Mission4Assignment
             return result;
         }
 
-        public bool CheckWinDiagonal(string[] positionArray)
+        public bool CheckWinDiagonal(string[] positionArray, string name)
         {
             bool result = false;
 
             if (positionArray[0] == "X" && positionArray[4] == "X" && positionArray[8] == "X")
             {
-                Console.WriteLine("Player 1 Wins Diagonally!");
+                Console.WriteLine($"{name} Wins!");
+
                 result = true;
             }
             else if (positionArray[2] == "X" && positionArray[4] == "X" && positionArray[6] == "X")
             {
-                Console.WriteLine("Player 1 Wins Diagonally!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[0] == "O" && positionArray[4] == "O" && positionArray[8] == "O")
             {
-                Console.WriteLine("Player 2 Wins Diagonally!");
+                Console.WriteLine($"{name} Wins!");
 
                 result = true;
             }
             else if (positionArray[2] == "O" && positionArray[4] == "O" && positionArray[6] == "O")
             {
-                Console.WriteLine("Player 2 Wins Diagonally!");
+                Console.WriteLine($"{name} Wins!");
+
                 result = true;
             }
             else
