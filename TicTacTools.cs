@@ -2,6 +2,8 @@
 // Section: 004
 // Group: 4-15
 
+// Description: This class contains the logic for the tic tac toe game that checks for a win or tie and updates the game board.
+
 using System;
 using System.Collections.Generic;
 using System.Linq;

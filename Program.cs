@@ -18,10 +18,10 @@ string player2 = ""; // Player 2's name
 int playerTurn = 0; // 0 = player 1, 1 = player 2
 string playerName = ""; // Temporarily holds the current player's name
 string token = ""; // Temporarily holds the current player's tic tac toe token (X or O)
-bool isContinuing = true;
+bool isContinuing = true; // Used to ensure valid input from the player
 string[] game = new string[9]; // Contains tic tac toe array as game progresses
 int position = 0; // Temporary holds current player's desired position on the board where they want to put their token (X or O)
-bool gameOver = false;
+bool gameOver = false; // Used to determine if the game is over
 
 
 // Fill the array with spaces (helps maintain format of the board)
@@ -43,6 +43,8 @@ Console.WriteLine();
 Console.WriteLine();
 Console.WriteLine("This is the tic tac toe position layout for reference");
 Console.WriteLine();
+
+// Print the reference board
 string completeBoard = $" 1 | 2 | 3\n" +
                $" ---------\n" +
                $" 4 | 5 | 6\n" +
