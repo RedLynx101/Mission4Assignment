@@ -119,10 +119,6 @@ do
     {
         gameOver = true;
     }
-    else
-    {
-        Console.WriteLine("Error determining winner");
-    }
 
     // Switch players
     if (playerTurn == 0)
