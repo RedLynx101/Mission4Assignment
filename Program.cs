@@ -107,19 +107,21 @@ do
     {
         gameOver = true;
     }
-    if (ttt.CheckWinVertical(game, playerName) == true)
+    else if (ttt.CheckWinVertical(game, playerName) == true)
     {
         gameOver = true;
     }
-    if (ttt.CheckWinDiagonal(game, playerName) == true)
+    else if (ttt.CheckWinDiagonal(game, playerName) == true)
     {
         gameOver = true;
     }
-
-    // Check for tie / see if the array is full and no one has won 
-    if (ttt.CheckTie(game) == true)
+    else if (ttt.CheckTie(game) == true)
     {
         gameOver = true;
+    }
+    else
+    {
+        Console.WriteLine("Error determining winner");
     }
 
     // Switch players
