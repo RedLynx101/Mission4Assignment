@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Authors: Nya Croft, Noah Hicks, Noah Haskett, Jensen Hermansen
+// Section: 004
+// Group: 4-15
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;

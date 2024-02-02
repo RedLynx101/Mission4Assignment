@@ -1,5 +1,7 @@
 ﻿// Authors: Nya Croft, Noah Hicks, Noah Haskett, Jensen Hermansen
-// Section 004
+// Section: 004
+// Group: 4-15
+
 // Description: This program is a tic tac toe game that allows two players to play against each other.
 // The game will prompt the players to enter their names and then will display the game board.
 // The players will take turns entering the position number they would like to place their token.
@@ -15,17 +17,20 @@ string player1 = ""; // Player 1's name
 string player2 = ""; // Player 2's name
 int playerTurn = 0; // 0 = player 1, 1 = player 2
 string playerName = ""; // Temporarily holds the current player's name
-string token = ""; // Temporarily holds the current player's token
+string token = ""; // Temporarily holds the current player's tic tac toe token (X or O)
 bool isContinuing = true;
-string[] game = new string[9];
-int position = 0;
+string[] game = new string[9]; // Contains tic tac toe array as game progresses
+int position = 0; // Temporary holds current player's desired position on the board where they want to put their token (X or O)
 bool gameOver = false;
 
+
+// Fill the array with spaces (helps maintain format of the board)
 for (int i = 0; i < game.Length; i++)
 {
     game[i] = " ";
 }
 
+// Welcome and "load" the game
 Console.WriteLine("Welcome to our tic tac toe game!");
 Console.WriteLine("Loading the playing field");
 Thread.Sleep(300);
@@ -48,13 +53,16 @@ Console.WriteLine(completeBoard);
 Console.WriteLine();
 
 
+// Player name inputs
 Console.WriteLine("Please enter player 1's name: ");
 player1 = Console.ReadLine();
 Console.WriteLine("Please enter player 2's name: ");
 player2 = Console.ReadLine();
 
+// Do while there are still blanks and someone hasn't won yet
 do
 {
+    // Assign token (X or O) and playerName to the current player
     if (playerTurn == 0)
     {
         playerName = player1;
@@ -66,7 +74,7 @@ do
         token = "O";
     }
     
-
+    // Ensure input is valid
     while (isContinuing)
     {
         Console.WriteLine($"{playerName}, please enter the position number you would like: ");
@@ -90,8 +98,11 @@ do
         }
     }
     isContinuing = true;
+
+    // Update game array and print updated tic tac toe board
     Console.WriteLine(ttt.UpdatePrintBoard(game));
 
+    // Determine if someone has won yet
     if (ttt.CheckWinHorizontal(game, playerName) == true)
     {
         gameOver = true;
@@ -105,13 +116,13 @@ do
         gameOver = true;
     }
 
-    // Logic to see if the array is full and no one has won.
+    // Check for tie / see if the array is full and no one has won 
     if (ttt.CheckTie(game) == true)
     {
         gameOver = true;
     }
 
-
+    // Switch players
     if (playerTurn == 0)
     {
         playerTurn = 1;
